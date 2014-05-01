@@ -28,7 +28,7 @@ extern int opt_log_level;
 
 extern int opt_log_show_date;
 
-#define LOGBUFSIZ 256
+#define LOGBUFSIZ 2560
 
 extern void _applog(int prio, const char *str, bool force);
 
