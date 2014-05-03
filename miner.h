@@ -3,6 +3,17 @@
 
 #include "config.h"
 
+#ifdef GIT_VERSION
+#undef VERSION
+#define VERSION GIT_VERSION
+#endif
+
+#ifdef BUILD_NUMBER
+#define CGMINER_VERSION VERSION "-" BUILD_NUMBER
+#else
+#define CGMINER_VERSION VERSION
+#endif
+
 #include <stdbool.h>
 #include <stdint.h>
 #include <sys/time.h>
